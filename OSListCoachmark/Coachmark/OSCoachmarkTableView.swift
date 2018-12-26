@@ -42,21 +42,21 @@ class OSCoachmarkTableView:UITableView {
 }
 extension OSCoachmarkTableView:UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    fileprivate func numberOfSections(in tableView: UITableView) -> Int {
         if let dataSource = self.dataSourceObject {
             return dataSource.numberOfSections!(in: tableView)
         }
         return 1
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    fileprivate func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let dataSource = self.dataSourceObject {
             return dataSource.tableView!(tableView, titleForHeaderInSection:section)
         }
         return nil
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    fileprivate func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let dataSource = self.dataSourceObject {
             return dataSource.tableView(tableView, numberOfRowsInSection: section)
         }
@@ -64,7 +64,7 @@ extension OSCoachmarkTableView:UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     fileprivate func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let dataSource = self.dataSourceObject {
             configureCoachmarkFor(indexPath)
             return dataSource.tableView(tableView, cellForRowAt: indexPath)
