@@ -8,10 +8,12 @@
 
 import UIKit
 
+// Data source protocol
 protocol OSCoachmarkDataSource {
     func coachmarkTitleFor(indexPath:IndexPath, coachmark:OSCoachmarkView) -> String
 }
 
+// Protocol extension
 extension OSCoachmarkDataSource {
     func coachmarkTitleFor(indexPath:IndexPath, coachmark:OSCoachmarkView) -> String {
         return "Section \(indexPath.section)"
@@ -24,7 +26,6 @@ class OSCoachmarkTableView:UITableView {
 
     override var dataSource: UITableViewDataSource? {
         didSet {
-            
             if let dataSource = self.dataSource, dataSource.isEqual(self) == false {
                 self.dataSourceObject = dataSource
                 self.dataSource = self
