@@ -36,7 +36,7 @@ public class OSCoachmarkView:UIView {
         setupCoachmark()
     }
     
-     fileprivate func setupCoachmark() {
+     fileprivate func setupCoachmark() {g
         self.backgroundColor = UIColor.init(hex:0x3797F0)
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
         self.translatesAutoresizingMaskIntoConstraints = false
