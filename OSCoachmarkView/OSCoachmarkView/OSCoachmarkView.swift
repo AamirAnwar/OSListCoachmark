@@ -16,11 +16,11 @@ enum OSCoachmarkViewConstants {
     static let verticalPadding:CGFloat = 8
 }
 
-protocol OSCoachmarkViewDelegate:class {
+public protocol OSCoachmarkViewDelegate:class {
     func didTapCoachmark(coachmark:OSCoachmarkView) -> Void
 }
 
-class OSCoachmarkView:UIView {
+public class OSCoachmarkView:UIView {
     
     public weak var delegate:OSCoachmarkViewDelegate?
     public var touchdownCompressionFactor:CGFloat = 0.05
@@ -70,7 +70,7 @@ class OSCoachmarkView:UIView {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         let shrinkFactor = 1 - touchdownCompressionFactor
         UIView.animate(withDuration: 0.2) {
@@ -80,12 +80,12 @@ class OSCoachmarkView:UIView {
         
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         self.didEndTouchInteraction()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         self.didEndTouchInteraction()
     }
@@ -99,7 +99,7 @@ class OSCoachmarkView:UIView {
         self.delegate?.didTapCoachmark(coachmark: self)
     }
     
-    override func didMoveToSuperview() {
+    override public func didMoveToSuperview() {
         guard let view = self.superview else {
             removeFromSuperview()
             return

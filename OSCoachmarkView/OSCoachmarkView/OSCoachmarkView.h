@@ -3,7 +3,7 @@
 //  OSCoachmarkView
 //
 //  Created by Aamir  on 27/12/18.
-//  Copyright © 2018 Aamir Anwar. All rights reserved.
+//  Copyright © 2018 AamirAnwar. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
