@@ -31,12 +31,12 @@ public class OSCoachmarkView:UIView {
         fatalError("init with coder not implemented")
     }
    
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupCoachmark()
     }
     
-     fileprivate func setupCoachmark() {
+     fileprivate func setupCoachmark() {g
         self.backgroundColor = UIColor.init(hex:0x3797F0)
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
         self.translatesAutoresizingMaskIntoConstraints = false
