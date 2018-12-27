@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43D62C6521D4FA090031C1B2 /* OSCoachmarkView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D62C6321D4FA090031C1B2 /* OSCoachmarkView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43D62C6821D4FA090031C1B2 /* OSCoachmarkView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D62C6121D4FA090031C1B2 /* OSCoachmarkView.framework */; };
+		43D62C6921D4FA090031C1B2 /* OSCoachmarkView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D62C6121D4FA090031C1B2 /* OSCoachmarkView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43D62C6E21D4FB1F0031C1B2 /* OSCoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C845121CBF2FA00FBE649 /* OSCoachmarkView.swift */; };
 		F47C843F21CBF01700FBE649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C843E21CBF01700FBE649 /* AppDelegate.swift */; };
 		F47C844121CBF01700FBE649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C844021CBF01700FBE649 /* ViewController.swift */; };
 		F47C844621CBF01800FBE649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47C844521CBF01800FBE649 /* Assets.xcassets */; };
@@ -14,7 +18,34 @@
 		F47C845221CBF2FA00FBE649 /* OSCoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C845121CBF2FA00FBE649 /* OSCoachmarkView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		43D62C6621D4FA090031C1B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47C843321CBF01700FBE649 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D62C6021D4FA090031C1B2;
+			remoteInfo = OSCoachmarkView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43D62C6D21D4FA090031C1B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43D62C6921D4FA090031C1B2 /* OSCoachmarkView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		43D62C6121D4FA090031C1B2 /* OSCoachmarkView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSCoachmarkView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D62C6321D4FA090031C1B2 /* OSCoachmarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCoachmarkView.h; sourceTree = "<group>"; };
+		43D62C6421D4FA090031C1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47C843B21CBF01700FBE649 /* OSListCoachmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSListCoachmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47C843E21CBF01700FBE649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47C844021CBF01700FBE649 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,20 +56,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F47C843821CBF01700FBE649 /* Frameworks */ = {
+		43D62C5E21D4FA090031C1B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F47C843821CBF01700FBE649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D62C6821D4FA090031C1B2 /* OSCoachmarkView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43D62C6221D4FA090031C1B2 /* OSCoachmarkView */ = {
+			isa = PBXGroup;
+			children = (
+				43D62C6321D4FA090031C1B2 /* OSCoachmarkView.h */,
+				43D62C6421D4FA090031C1B2 /* Info.plist */,
+			);
+			path = OSCoachmarkView;
+			sourceTree = "<group>";
+		};
 		F47C843221CBF01700FBE649 = {
 			isa = PBXGroup;
 			children = (
 				F47C843D21CBF01700FBE649 /* OSListCoachmark */,
+				43D62C6221D4FA090031C1B2 /* OSCoachmarkView */,
 				F47C843C21CBF01700FBE649 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F47C843B21CBF01700FBE649 /* OSListCoachmark.app */,
+				43D62C6121D4FA090031C1B2 /* OSCoachmarkView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,7 +124,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		43D62C5C21D4FA090031C1B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D62C6521D4FA090031C1B2 /* OSCoachmarkView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		43D62C6021D4FA090031C1B2 /* OSCoachmarkView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D62C6A21D4FA090031C1B2 /* Build configuration list for PBXNativeTarget "OSCoachmarkView" */;
+			buildPhases = (
+				43D62C5C21D4FA090031C1B2 /* Headers */,
+				43D62C5D21D4FA090031C1B2 /* Sources */,
+				43D62C5E21D4FA090031C1B2 /* Frameworks */,
+				43D62C5F21D4FA090031C1B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCoachmarkView;
+			productName = OSCoachmarkView;
+			productReference = 43D62C6121D4FA090031C1B2 /* OSCoachmarkView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F47C843A21CBF01700FBE649 /* OSListCoachmark */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F47C844D21CBF01800FBE649 /* Build configuration list for PBXNativeTarget "OSListCoachmark" */;
@@ -82,10 +161,12 @@
 				F47C843721CBF01700FBE649 /* Sources */,
 				F47C843821CBF01700FBE649 /* Frameworks */,
 				F47C843921CBF01700FBE649 /* Resources */,
+				43D62C6D21D4FA090031C1B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43D62C6721D4FA090031C1B2 /* PBXTargetDependency */,
 			);
 			name = OSListCoachmark;
 			productName = OSListCoachmark;
@@ -102,6 +183,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Aamir Anwar";
 				TargetAttributes = {
+					43D62C6021D4FA090031C1B2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					F47C843A21CBF01700FBE649 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -121,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				F47C843A21CBF01700FBE649 /* OSListCoachmark */,
+				43D62C6021D4FA090031C1B2 /* OSCoachmarkView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43D62C5F21D4FA090031C1B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F47C843921CBF01700FBE649 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +230,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43D62C5D21D4FA090031C1B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D62C6E21D4FB1F0031C1B2 /* OSCoachmarkView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F47C843721CBF01700FBE649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +249,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43D62C6721D4FA090031C1B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D62C6021D4FA090031C1B2 /* OSCoachmarkView */;
+			targetProxy = 43D62C6621D4FA090031C1B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F47C844721CBF01800FBE649 /* LaunchScreen.storyboard */ = {
@@ -162,6 +270,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		43D62C6B21D4FA090031C1B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C3RT9P7X65;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OSCoachmarkView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aamiranwar.OSCoachmarkView;
+				PRODUCT_NAME = OSCoachmarkView;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43D62C6C21D4FA090031C1B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C3RT9P7X65;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OSCoachmarkView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aamiranwar.OSCoachmarkView;
+				PRODUCT_NAME = OSCoachmarkView;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F47C844B21CBF01800FBE649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -281,6 +445,7 @@
 		F47C844E21CBF01800FBE649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3RT9P7X65;
@@ -300,6 +465,7 @@
 		F47C844F21CBF01800FBE649 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3RT9P7X65;
@@ -319,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43D62C6A21D4FA090031C1B2 /* Build configuration list for PBXNativeTarget "OSCoachmarkView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D62C6B21D4FA090031C1B2 /* Debug */,
+				43D62C6C21D4FA090031C1B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F47C843621CBF01700FBE649 /* Build configuration list for PBXProject "OSListCoachmark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
