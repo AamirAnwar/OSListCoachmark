@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     let coachmarkSection:Int = 5
-    let tableView: OSCoachmarkTableView = {
-        let tv = OSCoachmarkTableView.init(frame: .zero, style: .plain)
+    let tableView: UITableView = {
+        let tv = UITableView.init(frame: .zero, style: .plain)
         return tv
     }()
     let cellReuseIdentifer = "default_cell"
@@ -21,23 +21,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         view.addSubview(coachmarkView)
-        coachmarkView.delegate = self
-        coachmarkView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor, constant: -OSCoachmarkViewConstants.bottomPadding).isActive = true
-        coachmarkView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
-        coachmarkView.transform = coachmarkView.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
-        self.tableView.coachmarkView = self.coachmarkView
-        
     }
     
     func setupTableView() -> Void {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         view.addSubview(self.tableView)
+        let guide = view.safeAreaLayoutGuide
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        self.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        self.tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        self.tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        self.tableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+        self.tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+        self.tableView.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellReuseIdentifer)
     }
 }
@@ -63,30 +58,14 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-        
         if section == self.coachmarkSection {
-            self.hideCoachmark()
+            self.coachmarkView.hide()
         }
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if section == self.coachmarkSection {
-            self.showCoachmark()
-        }
-    }
-}
-
-extension ViewController {
-    func showCoachmark() {
-        UIView.animate(withDuration: 0.2) {
-            self.coachmarkView.transform = .identity
-        }
-        
-    }
-    
-    func hideCoachmark() {
-        UIView.animate(withDuration: 0.2) {
-            self.coachmarkView.transform = self.coachmarkView.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+            self.coachmarkView.show()
         }
     }
 }
@@ -95,9 +74,6 @@ extension ViewController:OSCoachmarkViewDelegate {
     func didTapCoachmark(coachmark: OSCoachmarkView) {
         print("\(coachmark) tapped!")
     }
-}
-extension ViewController:OSCoachmarkDataSource {
-    
 }
 
 

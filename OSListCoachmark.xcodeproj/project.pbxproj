@@ -12,7 +12,6 @@
 		F47C844621CBF01800FBE649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47C844521CBF01800FBE649 /* Assets.xcassets */; };
 		F47C844921CBF01800FBE649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47C844721CBF01800FBE649 /* LaunchScreen.storyboard */; };
 		F47C845221CBF2FA00FBE649 /* OSCoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C845121CBF2FA00FBE649 /* OSCoachmarkView.swift */; };
-		F47C845621CC096C00FBE649 /* OSCoachmarkTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C845521CC096C00FBE649 /* OSCoachmarkTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		F47C844821CBF01800FBE649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F47C844A21CBF01800FBE649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47C845121CBF2FA00FBE649 /* OSCoachmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCoachmarkView.swift; sourceTree = "<group>"; };
-		F47C845521CC096C00FBE649 /* OSCoachmarkTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCoachmarkTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				F47C845121CBF2FA00FBE649 /* OSCoachmarkView.swift */,
-				F47C845521CC096C00FBE649 /* OSCoachmarkTableView.swift */,
 			);
 			path = Coachmark;
 			sourceTree = "<group>";
@@ -148,7 +145,6 @@
 				F47C845221CBF2FA00FBE649 /* OSCoachmarkView.swift in Sources */,
 				F47C844121CBF01700FBE649 /* ViewController.swift in Sources */,
 				F47C843F21CBF01700FBE649 /* AppDelegate.swift in Sources */,
-				F47C845621CC096C00FBE649 /* OSCoachmarkTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

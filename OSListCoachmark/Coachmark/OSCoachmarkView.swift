@@ -34,7 +34,7 @@ class OSCoachmarkView:UIView {
         setupCoachmark()
     }
     
-    func setupCoachmark() {
+     fileprivate func setupCoachmark() {
         self.backgroundColor = UIColor.white
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
         self.layer.borderColor = UIColor.gray.cgColor
@@ -67,27 +67,60 @@ class OSCoachmarkView:UIView {
         }
         
     }
+    
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         self.didEndTouchInteraction()
     }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         self.didEndTouchInteraction()
     }
     
-    func didEndTouchInteraction() {
+    fileprivate func didEndTouchInteraction() {
         UIView.animate(withDuration: 0.2) {
             self.transform = self.transform.scaledBy(x: 1.20, y: 1.20)
         }
         self.delegate?.didTapCoachmark(coachmark: self)
     }
     
+    override func didMoveToSuperview() {
+        guard let view = self.superview else {
+            removeFromSuperview()
+            return
+        }
+        print("Moved to new superview - \(view)")
+        setupConstraintsWithSuperview(view)
+    }
+    
+    
+    fileprivate func setupConstraintsWithSuperview(_ view:UIView)->Void {
+        view.addSubview(self)
+        self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -OSCoachmarkViewConstants.bottomPadding).isActive = true
+        self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+    }
+    
 }
 
+
+// Open API
 extension OSCoachmarkView {
-    // API
     public func setText(_ text:String) {
         self.titleLabel.text = text
     }
+    
+    public func show() {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = .identity
+        }
+    }
+    
+    public func hide() {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+        }
+    }
 }
+
