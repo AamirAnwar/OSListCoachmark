@@ -9,8 +9,8 @@
 import UIKit
 
 enum OSCoachmarkViewConstants {
-    static let coachmarkWidth:CGFloat = 150 + 2*horizontalPadding
-    static let coachmarkHeight:CGFloat = 44
+    static let coachmarkWidth:CGFloat = 283 + 2*horizontalPadding
+    static let coachmarkHeight:CGFloat = 46
     static let bottomPadding:CGFloat = 44
     static let horizontalPadding:CGFloat = 8
     static let verticalPadding:CGFloat = 8
@@ -23,7 +23,9 @@ protocol OSCoachmarkViewDelegate:class {
 class OSCoachmarkView:UIView {
     
     public weak var delegate:OSCoachmarkViewDelegate?
-    fileprivate let titleLabel:UILabel = UILabel()
+    public var touchdownCompressionFactor:CGFloat = 0.05
+    public var bottomConstraint:NSLayoutConstraint?
+    public let titleLabel:UILabel = UILabel()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init with coder not implemented")
@@ -35,13 +37,18 @@ class OSCoachmarkView:UIView {
     }
     
      fileprivate func setupCoachmark() {
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.init(hex:0x3797F0)
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
-        self.layer.borderColor = UIColor.gray.cgColor
-        self.layer.borderWidth = 0.5
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.coachmarkHeight).isActive = true
         self.widthAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.coachmarkWidth).isActive = true
+        
+        // Shadow
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize.init(width: 0, height: 2)
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.13
+        
         
         // Title label
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -55,15 +62,20 @@ class OSCoachmarkView:UIView {
             ])
         
         
-        self.titleLabel.text = "New content!"
-        self.titleLabel.textColor = UIColor.black
+        self.titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        self.titleLabel.adjustsFontSizeToFitWidth = true
+        self.titleLabel.minimumScaleFactor = 0.5
+        self.titleLabel.text = "See more coachmarks like this one"
+        self.titleLabel.textColor = UIColor.white
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        let shrinkFactor = 1 - touchdownCompressionFactor
         UIView.animate(withDuration: 0.2) {
-            self.transform = CGAffineTransform.identity.scaledBy(x: 0.80, y: 0.80)
+            self.transform = CGAffineTransform.identity.scaledBy(x: shrinkFactor,
+                                                                 y: shrinkFactor)
         }
         
     }
@@ -79,8 +91,10 @@ class OSCoachmarkView:UIView {
     }
     
     fileprivate func didEndTouchInteraction() {
+        let growthFactor = 1 + touchdownCompressionFactor
         UIView.animate(withDuration: 0.2) {
-            self.transform = self.transform.scaledBy(x: 1.20, y: 1.20)
+            self.transform = self.transform.scaledBy(x:growthFactor,
+                                                     y:growthFactor)
         }
         self.delegate?.didTapCoachmark(coachmark: self)
     }
@@ -90,18 +104,17 @@ class OSCoachmarkView:UIView {
             removeFromSuperview()
             return
         }
-        print("Moved to new superview - \(view)")
         setupConstraintsWithSuperview(view)
     }
     
     
     fileprivate func setupConstraintsWithSuperview(_ view:UIView)->Void {
         view.addSubview(self)
-        self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -OSCoachmarkViewConstants.bottomPadding).isActive = true
+        self.bottomConstraint = self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -OSCoachmarkViewConstants.bottomPadding)
+        self.bottomConstraint?.isActive = true
         self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
     }
-    
 }
 
 
@@ -112,15 +125,35 @@ extension OSCoachmarkView {
     }
     
     public func show() {
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.15) {
             self.transform = .identity
         }
     }
     
     public func hide() {
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.15) {
             self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
         }
     }
 }
+
+
+
+extension UIColor {
+    convenience init(red:Int, green:Int, blue:Int) {
+        guard (red >= 0 && red <= 255) && (green >= 0 && green <= 255) && (blue >= 0 && blue <= 255) else {
+            self.init()
+            return
+        }
+        let redComponent = CGFloat.init(red)/255.0
+        let greenComponent = CGFloat.init(green)/255.0
+        let blueComponent = CGFloat.init(blue)/255.0
+        self.init(red: redComponent, green: greenComponent, blue: blueComponent, alpha: 1.0)
+    }
+    
+    convenience init(hex:Int) {
+        self.init(red: (hex >> 16) & 0xFF, green: (hex >> 8) & 0xFF, blue: (hex) & 0xFF)
+    }
+}
+
 
