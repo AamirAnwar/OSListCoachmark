@@ -8,8 +8,13 @@
 
 import UIKit
 
+public enum OSCoachmarkAnchor {
+    case top
+    case bottom
+}
+
 enum OSCoachmarkViewConstants {
-    static let coachmarkWidth:CGFloat = 283 + 2*horizontalPadding
+    static let coachmarkMinimumWidth:CGFloat = 50 + 2*horizontalPadding
     static let coachmarkHeight:CGFloat = 46
     static let bottomPadding:CGFloat = 44
     static let horizontalPadding:CGFloat = 8
@@ -22,11 +27,16 @@ public protocol OSCoachmarkViewDelegate:class {
 
 public class OSCoachmarkView:UIView {
     
+    public var isShowing:Bool = false
     public weak var delegate:OSCoachmarkViewDelegate?
     public var touchdownCompressionFactor:CGFloat = 0.05
-    public var bottomConstraint:NSLayoutConstraint?
     public let titleLabel:UILabel = UILabel()
     
+    fileprivate var topAdjust:CGFloat = 0
+    fileprivate var bottomAdjust:CGFloat = 0
+    fileprivate var anchor:OSCoachmarkAnchor = .bottom
+    fileprivate var bottomConstraint:NSLayoutConstraint?
+    fileprivate var topConstraint:NSLayoutConstraint?
     required init?(coder aDecoder: NSCoder) {
         fatalError("init with coder not implemented")
     }
@@ -41,7 +51,7 @@ public class OSCoachmarkView:UIView {
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.coachmarkHeight).isActive = true
-        self.widthAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.coachmarkWidth).isActive = true
+        self.widthAnchor.constraint(greaterThanOrEqualToConstant: OSCoachmarkViewConstants.coachmarkMinimumWidth).isActive = true
         
         // Shadow
         self.layer.shadowColor = UIColor.black.cgColor
@@ -62,7 +72,7 @@ public class OSCoachmarkView:UIView {
             ])
         
         
-        self.titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        self.titleLabel.font = OSCoachmarkView.getTitleFont()
         self.titleLabel.adjustsFontSizeToFitWidth = true
         self.titleLabel.minimumScaleFactor = 0.5
         self.titleLabel.text = "See more coachmarks like this one"
@@ -99,21 +109,34 @@ public class OSCoachmarkView:UIView {
         self.delegate?.didTapCoachmark(coachmark: self)
     }
     
-    override public func didMoveToSuperview() {
-        guard let view = self.superview else {
-            removeFromSuperview()
+    fileprivate func setupConstraintsWithSuperview(_ view:UIView, anchor:OSCoachmarkAnchor, shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false)->Void {
+        guard let parentView = self.superview, parentView.isEqual(view) else {
+            assert(false, "Parent view is not the same!")
             return
         }
-        setupConstraintsWithSuperview(view)
+        
+        switch anchor {
+        case .top:
+            let anchor = useSafeArea ? view.safeAreaLayoutGuide.topAnchor:view.topAnchor
+            self.topConstraint = self.topAnchor.constraint(equalTo: anchor, constant: OSCoachmarkViewConstants.verticalPadding)
+            self.topConstraint?.isActive = true
+            self.transform = self.transform.translatedBy(x: 0,
+                                                         y: -(OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.verticalPadding))
+            break
+        case .bottom:
+            let anchor = useSafeArea ? view.safeAreaLayoutGuide.bottomAnchor:view.bottomAnchor
+            self.bottomConstraint = self.bottomAnchor.constraint(equalTo: anchor, constant: -OSCoachmarkViewConstants.bottomPadding)
+            self.bottomConstraint?.isActive = true
+            self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+            break
+        }
+        self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        self.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: OSCoachmarkViewConstants.horizontalPadding).isActive = true
+        self.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -OSCoachmarkViewConstants.horizontalPadding).isActive = true
     }
     
-    
-    fileprivate func setupConstraintsWithSuperview(_ view:UIView)->Void {
-        view.addSubview(self)
-        self.bottomConstraint = self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -OSCoachmarkViewConstants.bottomPadding)
-        self.bottomConstraint?.isActive = true
-        self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
-        self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+    fileprivate static func getTitleFont() -> UIFont {
+        return UIFont.systemFont(ofSize: 15, weight: .medium)
     }
 }
 
@@ -122,18 +145,48 @@ public class OSCoachmarkView:UIView {
 extension OSCoachmarkView {
     public func setText(_ text:String) {
         self.titleLabel.text = text
+        UIView.animate(withDuration: 0.2) {
+            self.layoutIfNeeded()
+        }
     }
     
     public func show() {
+        guard isShowing == false else {return}
+        isShowing = true
         UIView.animate(withDuration: 0.15) {
             self.transform = .identity
         }
     }
     
     public func hide() {
+        guard isShowing == true else {return}
+        isShowing = false
         UIView.animate(withDuration: 0.15) {
-            self.transform = self.transform.translatedBy(x: 0, y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding)
+            switch self.anchor {
+            case .top:
+                self.transform = self.transform.translatedBy(x: 0,
+                                                             y: -(OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.verticalPadding + self.topAdjust))
+            case .bottom:
+                self.transform = self.transform.translatedBy(x: 0,
+                                                             y: OSCoachmarkViewConstants.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding + self.bottomAdjust)
+            }
         }
+    }
+    
+    public func attachToView(_ view:UIView, anchor:OSCoachmarkAnchor, shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
+        view.addSubview(self)
+        self.anchor = anchor
+        self.setupConstraintsWithSuperview(view, anchor: self.anchor, shouldUseSafeAreaLayoutGuide: useSafeArea)
+    }
+    
+    public func adjustTop(top:CGFloat) {
+        self.topAdjust = top
+        self.topConstraint?.constant += top;
+    }
+    
+    public func adjustBottom(bottom:CGFloat) {
+        self.bottomAdjust = bottom
+        self.bottomConstraint?.constant -= bottom;
     }
 }
 
