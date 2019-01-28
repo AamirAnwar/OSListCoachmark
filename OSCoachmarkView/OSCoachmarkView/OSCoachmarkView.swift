@@ -19,6 +19,7 @@ enum OSCoachmarkViewConstants {
     static let bottomPadding:CGFloat = 44
     static let horizontalPadding:CGFloat = 8
     static let verticalPadding:CGFloat = 8
+    static let loaderSize:CGFloat = coachmarkHeight
 }
 
 public protocol OSCoachmarkViewDelegate:class {
@@ -31,12 +32,23 @@ public class OSCoachmarkView:UIView {
     public weak var delegate:OSCoachmarkViewDelegate?
     public var touchdownCompressionFactor:CGFloat = 0.05
     public let titleLabel:UILabel = UILabel()
+    public let loader:UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView.init(style: .white)
+        loader.hidesWhenStopped = true
+        return loader
+    }()
+    public var isLoading = false
     
     fileprivate var topAdjust:CGFloat = 0
     fileprivate var bottomAdjust:CGFloat = 0
     fileprivate var anchor:OSCoachmarkAnchor = .bottom
     fileprivate var bottomConstraint:NSLayoutConstraint?
     fileprivate var topConstraint:NSLayoutConstraint?
+    fileprivate var minWidthConstraint:NSLayoutConstraint?
+    fileprivate var loaderWidthConstraint:NSLayoutConstraint?
+    fileprivate var loaderCenterXConstraint:NSLayoutConstraint?
+    fileprivate var loaderCenterYConstraint:NSLayoutConstraint?
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init with coder not implemented")
     }
@@ -51,7 +63,8 @@ public class OSCoachmarkView:UIView {
         self.layer.cornerRadius = OSCoachmarkViewConstants.coachmarkHeight/2
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.coachmarkHeight).isActive = true
-        self.widthAnchor.constraint(greaterThanOrEqualToConstant: OSCoachmarkViewConstants.coachmarkMinimumWidth).isActive = true
+        self.minWidthConstraint = self.widthAnchor.constraint(greaterThanOrEqualToConstant: OSCoachmarkViewConstants.coachmarkMinimumWidth)
+        self.minWidthConstraint?.isActive = true
         
         // Shadow
         self.layer.shadowColor = UIColor.black.cgColor
@@ -78,6 +91,10 @@ public class OSCoachmarkView:UIView {
         self.titleLabel.text = "See more coachmarks like this one"
         self.titleLabel.textColor = UIColor.white
         
+        self.addSubview(self.loader)
+        self.loader.translatesAutoresizingMaskIntoConstraints = false
+        self.loader.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.loader.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -87,7 +104,6 @@ public class OSCoachmarkView:UIView {
             self.transform = CGAffineTransform.identity.scaledBy(x: shrinkFactor,
                                                                  y: shrinkFactor)
         }
-        
     }
     
     override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -145,6 +161,34 @@ public class OSCoachmarkView:UIView {
 extension OSCoachmarkView {
     public func setText(_ text:String) {
         self.titleLabel.text = text
+        UIView.animate(withDuration: 0.2) {
+            self.layoutIfNeeded()
+        }
+    }
+    
+    public func showLoader() {
+        guard isLoading == false else {return}
+        isLoading = true
+        self.minWidthConstraint?.isActive = false
+        if self.loaderWidthConstraint == nil {
+           self.loaderWidthConstraint = self.widthAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.loaderSize)
+        }
+        self.loaderWidthConstraint?.isActive = true
+        self.titleLabel.isHidden = true
+        self.loader.startAnimating()
+        UIView.animate(withDuration: 0.2) {
+            self.layoutIfNeeded()
+        }
+        
+    }
+    
+    public func hideLoader() {
+        guard isLoading == true else {return}
+        isLoading = false
+        self.loader.stopAnimating()
+        self.minWidthConstraint?.isActive = true
+        self.loaderWidthConstraint?.isActive = false
+        self.titleLabel.isHidden = false
         UIView.animate(withDuration: 0.2) {
             self.layoutIfNeeded()
         }
