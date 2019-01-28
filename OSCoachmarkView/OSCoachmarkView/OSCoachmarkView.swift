@@ -56,6 +56,8 @@ public class OSCoachmarkView:UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupCoachmark()
+        self.setupTitleLabel()
+        self.setupLoader()
     }
     
      fileprivate func setupCoachmark() {
@@ -71,9 +73,9 @@ public class OSCoachmarkView:UIView {
         self.layer.shadowOffset = CGSize.init(width: 0, height: 2)
         self.layer.shadowRadius = 10
         self.layer.shadowOpacity = 0.13
-        
-        
-        // Title label
+    }
+    
+    func setupTitleLabel() {
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.titleLabel.textAlignment = .center
         self.addSubview(self.titleLabel)
@@ -90,7 +92,9 @@ public class OSCoachmarkView:UIView {
         self.titleLabel.minimumScaleFactor = 0.5
         self.titleLabel.text = "See more coachmarks like this one"
         self.titleLabel.textColor = UIColor.white
-        
+    }
+    
+    func setupLoader() {
         self.addSubview(self.loader)
         self.loader.translatesAutoresizingMaskIntoConstraints = false
         self.loader.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
