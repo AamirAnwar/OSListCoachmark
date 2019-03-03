@@ -9,6 +9,7 @@
 import UIKit
 
 public class OSListCoachmark:UIView {
+    fileprivate let coachmarkHeight:CGFloat = 46
     public let titleLabel:UILabel = UILabel()
     
     public override init(frame: CGRect) {
@@ -31,6 +32,7 @@ public class OSListCoachmark:UIView {
         self.layer.shadowOpacity = 0.13
         
         self.setupTitleLabel()
+        self.heightAnchor.constraint(equalToConstant: self.coachmarkHeight)
     }
     
     func setupTitleLabel() {

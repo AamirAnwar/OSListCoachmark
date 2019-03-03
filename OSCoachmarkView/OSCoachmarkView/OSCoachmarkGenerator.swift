@@ -10,16 +10,21 @@ import Foundation
 
 public enum OSCoachmarkType {
     case list
+    case appstore
 }
 
 public class OSCoachmarkGenerator {
     public static func getCoachmarkWith(type:OSCoachmarkType) -> OSCoachmarkView {
+        var view:UIView!
         switch type {
             case .list:
-                let coachmarkView = OSCoachmarkView()
-                let listCoachmark = OSListCoachmark()
-                coachmarkView.attachedView = listCoachmark
-                return coachmarkView
+                view = OSListCoachmark()
+            case .appstore:
+                view = OSAppstoreCoachmark()
+            
         }
+        let coachmarkView = OSCoachmarkView()
+        coachmarkView.attachedView = view
+        return coachmarkView
     }
 }

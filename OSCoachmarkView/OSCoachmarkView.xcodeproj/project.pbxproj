@@ -11,6 +11,7 @@
 		435E6F44222C653600E3E9F2 /* OSCoachmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E6F43222C653600E3E9F2 /* OSCoachmarkPresenter.swift */; };
 		435E6F48222C6B7000E3E9F2 /* OSListCoachmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E6F47222C6B7000E3E9F2 /* OSListCoachmark.swift */; };
 		435E6F4A222C6DE800E3E9F2 /* OSCoachmarkGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E6F49222C6DE800E3E9F2 /* OSCoachmarkGenerator.swift */; };
+		43BD2264222C850D0091BB39 /* OSAppstoreCoachmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BD2263222C850D0091BB39 /* OSAppstoreCoachmark.swift */; };
 		43EF282A21D54BF200D17031 /* OSCoachmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF282921D54BF200D17031 /* OSCoachmarkView.swift */; };
 		43FFB4C721D54BA300B04CC1 /* OSCoachmarkView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FFB4BD21D54BA300B04CC1 /* OSCoachmarkView.framework */; };
 		43FFB4CC21D54BA300B04CC1 /* OSCoachmarkViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FFB4CB21D54BA300B04CC1 /* OSCoachmarkViewTests.swift */; };
@@ -32,6 +33,7 @@
 		435E6F43222C653600E3E9F2 /* OSCoachmarkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCoachmarkPresenter.swift; sourceTree = "<group>"; };
 		435E6F47222C6B7000E3E9F2 /* OSListCoachmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSListCoachmark.swift; sourceTree = "<group>"; };
 		435E6F49222C6DE800E3E9F2 /* OSCoachmarkGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCoachmarkGenerator.swift; sourceTree = "<group>"; };
+		43BD2263222C850D0091BB39 /* OSAppstoreCoachmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSAppstoreCoachmark.swift; sourceTree = "<group>"; };
 		43EF282921D54BF200D17031 /* OSCoachmarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCoachmarkView.swift; sourceTree = "<group>"; };
 		43FFB4BD21D54BA300B04CC1 /* OSCoachmarkView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSCoachmarkView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FFB4C021D54BA300B04CC1 /* OSCoachmarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCoachmarkView.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				435E6F47222C6B7000E3E9F2 /* OSListCoachmark.swift */,
+				43BD2263222C850D0091BB39 /* OSAppstoreCoachmark.swift */,
 			);
 			path = Coachmarks;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				43EF282A21D54BF200D17031 /* OSCoachmarkView.swift in Sources */,
 				435E6F4A222C6DE800E3E9F2 /* OSCoachmarkGenerator.swift in Sources */,
 				435E6F48222C6B7000E3E9F2 /* OSListCoachmark.swift in Sources */,
+				43BD2264222C850D0091BB39 /* OSAppstoreCoachmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
