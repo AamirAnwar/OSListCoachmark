@@ -10,5 +10,6 @@ TODO
 * [ ] Add logic for expanding coachmark THEN showcasing the content view
 * [ ] Add Cocoapod/Carthage support
 * [ ] Polish README
+* [ ] Generate documentation
 
 ![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/demo.gif)
