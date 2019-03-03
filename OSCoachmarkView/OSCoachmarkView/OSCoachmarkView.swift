@@ -23,7 +23,7 @@ enum OSCoachmarkViewConstants {
 }
 
 public protocol OSCoachmarkViewDelegate:class {
-    func didTapCoachmark(coachmark:OSCoachmarkView) -> Void
+    func didTapCoachmark(coachmark:OSCoachmarkView)
 }
 
 public class OSCoachmarkView:UIView {
