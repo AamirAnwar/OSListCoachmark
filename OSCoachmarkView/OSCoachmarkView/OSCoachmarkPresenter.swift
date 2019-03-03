@@ -30,7 +30,13 @@ public protocol OSCoachmarkPresenterDelegate:class {
 }
 
 public class OSCoachmarkPresenter {
-    public var view:UIView!
+    public var view:UIView! {
+        didSet {
+            if view != nil {
+               setup()
+            }
+        }
+    }
     public var isShowing:Bool = false
     public var touchdownCompressionFactor:CGFloat = 0.05
     public var isLoading = false
@@ -44,6 +50,7 @@ public class OSCoachmarkPresenter {
     fileprivate var loaderCenterXConstraint:NSLayoutConstraint?
     fileprivate var loaderCenterYConstraint:NSLayoutConstraint?
     
+    // Make the default init public
     public init() {}
     
     func setup() {
@@ -147,6 +154,7 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
             self.loaderWidthConstraint = self.view.widthAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.loaderSize)
         }
         self.loaderWidthConstraint?.isActive = true
+        self.view.layer.cornerRadius = self.view.frame.size.height/2
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         }
@@ -155,6 +163,7 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
     public func resetLoadingState() {
         guard isLoading == true else {return}
         isLoading = false
+        self.view.layer.cornerRadius = 0
         self.minWidthConstraint?.isActive = true
         self.loaderWidthConstraint?.isActive = false
         UIView.animate(withDuration: 0.2) {

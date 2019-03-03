@@ -70,6 +70,7 @@ public class OSCoachmarkView:UIView {
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         self.presenterDelegate?.didEndTouchInteraction()
+        self.delegate?.didTapCoachmark(coachmark: self)
     }
     
     fileprivate func configureView(_ view:UIView?) {
@@ -93,6 +94,7 @@ extension OSCoachmarkView {
     public func showLoader() {
         self.contentView.isHidden = true
         self.presenterDelegate?.showLoadingState()
+        self.backgroundColor = UIColor.init(hex:0x3797F0)
         self.loader.startAnimating()
     }
     
@@ -100,6 +102,7 @@ extension OSCoachmarkView {
         self.loader.stopAnimating()
         self.contentView.isHidden = false
         self.presenterDelegate?.resetLoadingState()
+        self.backgroundColor = UIColor.clear
     }
 }
 
