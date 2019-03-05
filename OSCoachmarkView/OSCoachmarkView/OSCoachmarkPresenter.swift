@@ -84,7 +84,9 @@ public class OSCoachmarkPresenter {
         self.heightConstraint?.isActive = true
     }
     
-    fileprivate func setupConstraintsWithSuperview(_ view:UIView, anchor:OSCoachmarkAnchor, shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false)->Void {
+    fileprivate func setupConstraintsWithSuperview(_ view:UIView,
+                                                   anchor:OSCoachmarkAnchor,
+                                                   shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
         guard let parentView = self.view.superview, parentView.isEqual(view) else {
             assert(false, "Parent view is not the same!")
             return
@@ -135,11 +137,13 @@ public class OSCoachmarkPresenter {
     }
     
     
-    public func attachToView(_ view:UIView, anchor:OSCoachmarkAnchor, shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
+    public func attachToView(_ view:UIView,
+                             anchor:OSCoachmarkAnchor,
+                             shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
         view.addSubview(self.view)
         
         // Layout view to get height
-        view.layoutIfNeeded()
+        self.view.layoutIfNeeded()
         self.anchor = anchor
         self.setupConstraintsWithSuperview(view, anchor: self.anchor, shouldUseSafeAreaLayoutGuide: useSafeArea)
     }

@@ -13,6 +13,14 @@ public protocol OSCoachmarkViewDelegate:class {
 }
 
 public class OSCoachmarkView:UIView {
+    public var showBlur = false {
+        didSet {
+            self.blurView.isHidden = !showBlur
+            if showBlur {
+                self.backgroundColor = .clear
+            }
+        }
+    }
     public let contentView = UIView()
     public var attachedView:UIView? {
         didSet {
@@ -21,6 +29,15 @@ public class OSCoachmarkView:UIView {
     }
     public weak var presenterDelegate:OSCoachmarkPresenterDelegate?
     public weak var delegate:OSCoachmarkViewDelegate?
+    
+    fileprivate var blurView:UIVisualEffectView = {
+        var effect = UIBlurEffect.init(style: UIBlurEffect.Style.extraLight)
+        let blurView = UIVisualEffectView.init(effect: effect)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.clipsToBounds = true
+        blurView.isHidden = true
+        return blurView
+    }()
     
     // Default Loader
     public let loader:UIActivityIndicatorView = {
@@ -35,6 +52,7 @@ public class OSCoachmarkView:UIView {
    
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setupBlur()
         setupCoachmark()
         self.setupLoader()
     }
@@ -55,6 +73,16 @@ public class OSCoachmarkView:UIView {
         self.loader.translatesAutoresizingMaskIntoConstraints = false
         self.loader.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.loader.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
+    
+    func setupBlur() {
+        self.addSubview(blurView)
+        NSLayoutConstraint.activate([
+            self.blurView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.blurView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.blurView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.blurView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -86,6 +114,7 @@ public class OSCoachmarkView:UIView {
             view.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)])
     }
+
 }
 
 // Open API
@@ -94,7 +123,9 @@ extension OSCoachmarkView {
     public func showLoader() {
         self.contentView.isHidden = true
         self.presenterDelegate?.showLoadingState()
-        self.backgroundColor = UIColor.init(hex:0x3797F0)
+        if showBlur == false {
+            self.backgroundColor = UIColor.init(hex:0x3797F0)
+        }
         self.loader.startAnimating()
     }
     
@@ -103,6 +134,11 @@ extension OSCoachmarkView {
         self.contentView.isHidden = false
         self.presenterDelegate?.resetLoadingState()
         self.backgroundColor = UIColor.clear
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        blurView.layer.cornerRadius = ceil(self.frame.size.height/2)
     }
 }
 

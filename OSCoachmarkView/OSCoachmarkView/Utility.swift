@@ -24,3 +24,19 @@ extension UIColor {
         self.init(red: (hex >> 16) & 0xFF, green: (hex >> 8) & 0xFF, blue: (hex) & 0xFF)
     }
 }
+
+
+extension UIImageView {
+    public func setImageWithURL(_ url:URL) {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error == nil, let data = data {
+                DispatchQueue.main.async {
+                    self.image = UIImage.init(data: data)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+}
