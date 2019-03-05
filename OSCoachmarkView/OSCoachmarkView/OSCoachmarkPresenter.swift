@@ -179,8 +179,9 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
         self.minWidthConstraint?.isActive = false
         self.widthConstraint?.isActive = false
         if self.loaderWidthConstraint == nil {
-            self.loaderWidthConstraint = self.view.widthAnchor.constraint(equalToConstant: OSCoachmarkViewConstants.loaderSize)
+            self.loaderWidthConstraint = self.view.widthAnchor.constraint(equalToConstant: self.view.frame.size.height)
         }
+        
         self.loaderWidthConstraint?.isActive = true
         self.view.layer.cornerRadius = self.view.frame.size.height/2
         UIView.animate(withDuration: 0.2) {
