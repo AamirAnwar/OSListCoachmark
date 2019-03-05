@@ -163,18 +163,23 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
     
     public func didStartTouchInteraction() {
         let shrinkFactor = 1 - touchdownCompressionFactor
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseInOut], animations: {
             self.view.transform = CGAffineTransform.identity.scaledBy(x: shrinkFactor,
                                                                       y: shrinkFactor)
+        }) { (_) in
+            
         }
     }
     
     public func didEndTouchInteraction() {
         let growthFactor = 1 + touchdownCompressionFactor
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseInOut], animations: {
             self.view.transform = self.view.transform.scaledBy(x:growthFactor,
                                                                y:growthFactor)
+        }) { (_) in
+            
         }
+        
     }
     
     public func showLoadingState() {
