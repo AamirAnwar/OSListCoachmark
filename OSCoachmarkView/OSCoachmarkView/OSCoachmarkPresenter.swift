@@ -143,7 +143,7 @@ public class OSCoachmarkPresenter {
                                                                        y: self.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding + self.bottomAdjust)
             }
         }) { (_) in
-           self.view.isHidden = true
+            self.view.isHidden = true
             self.isTransitioning = false
         }
         
