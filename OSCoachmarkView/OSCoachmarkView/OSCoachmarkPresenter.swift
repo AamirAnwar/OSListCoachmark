@@ -53,6 +53,9 @@ public class OSCoachmarkPresenter {
     public var isShowing:Bool = false
     public var touchdownCompressionFactor:CGFloat = 0.05
     public var isLoading = false
+    
+    fileprivate var isTransitioning = false
+    
     fileprivate var topAdjust:CGFloat = 0
     fileprivate var bottomAdjust:CGFloat = 0
     fileprivate var anchor:OSCoachmarkAnchor = .bottom
@@ -114,26 +117,37 @@ public class OSCoachmarkPresenter {
     }
     
     public func show() {
-        guard isShowing == false else {return}
+        guard isShowing == false, isTransitioning == false else {return}
         isShowing = true
-        UIView.animate(withDuration: 0.15) {
+        self.view.isHidden = false
+        self.isTransitioning = true
+        UIView.animate(withDuration: 0.9, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [.curveEaseInOut], animations: {
             self.view.transform = .identity
+        }) { (_) in
+            self.isTransitioning = false
         }
     }
     
     public func hide() {
-        guard isShowing == true else {return}
+        guard isShowing == true, isTransitioning == false else {return}
+        
         isShowing = false
-        UIView.animate(withDuration: 0.15) {
+        self.isTransitioning = true
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [.curveEaseIn], animations: {
             switch self.anchor {
             case .top:
                 self.view.transform = self.view.transform.translatedBy(x: 0,
-                                                             y: -(self.coachmarkHeight + OSCoachmarkViewConstants.verticalPadding + self.topAdjust))
+                                                                       y: -(self.coachmarkHeight + OSCoachmarkViewConstants.verticalPadding + self.topAdjust))
             case .bottom:
                 self.view.transform = self.view.transform.translatedBy(x: 0,
-                                                             y: self.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding + self.bottomAdjust)
+                                                                       y: self.coachmarkHeight + OSCoachmarkViewConstants.bottomPadding + self.bottomAdjust)
             }
+        }) { (_) in
+           self.view.isHidden = true
+            self.isTransitioning = false
         }
+        
+        
     }
     
     

@@ -4,7 +4,7 @@ A coachmark used in list views in iOS applications
 
 TODO
 * [X] Abstract out presenter logic
-* [ ] Add animation options to both top and bottom modes
+* [X] Add animation options to both top and bottom modes
 * [X] Add blur support
 * [ ] Create example coachmarks using the Factory Pattern
 * [ ] Add logic for expanding coachmark THEN showcasing the content view
