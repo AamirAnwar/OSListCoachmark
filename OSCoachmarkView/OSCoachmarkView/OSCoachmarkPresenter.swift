@@ -68,6 +68,7 @@ public class OSCoachmarkPresenter {
     fileprivate var loaderCenterXConstraint:NSLayoutConstraint?
     fileprivate var loaderCenterYConstraint:NSLayoutConstraint?
     
+    fileprivate var originalCornerRadius:CGFloat = 0.0
     
     // Helpers
     var coachmarkHeight:CGFloat {
@@ -206,6 +207,7 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
         }
         
         self.loaderWidthConstraint?.isActive = true
+        self.originalCornerRadius = self.view.layer.cornerRadius
         self.view.layer.cornerRadius = self.view.frame.size.height/2
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
@@ -215,7 +217,7 @@ extension OSCoachmarkPresenter:OSCoachmarkPresenterDelegate {
     public func resetLoadingState() {
         guard isLoading == true else {return}
         isLoading = false
-        self.view.layer.cornerRadius = 0
+        self.view.layer.cornerRadius = self.originalCornerRadius
         self.loaderWidthConstraint?.isActive = false
         self.minWidthConstraint?.isActive = true
         self.widthConstraint?.isActive = true

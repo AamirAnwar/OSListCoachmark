@@ -13,14 +13,6 @@ public protocol OSCoachmarkViewDelegate:class {
 }
 
 public class OSCoachmarkView:UIView {
-    public var showBlur = false {
-        didSet {
-            self.blurView.isHidden = !showBlur
-            if showBlur {
-                self.backgroundColor = .clear
-            }
-        }
-    }
     public let contentView = UIView()
     public var attachedView:UIView? {
         didSet {
@@ -31,7 +23,7 @@ public class OSCoachmarkView:UIView {
     public weak var delegate:OSCoachmarkViewDelegate?
     
     fileprivate var blurView:UIVisualEffectView = {
-        var effect = UIBlurEffect.init(style: UIBlurEffect.Style.extraLight)
+        var effect = UIBlurEffect.init(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView.init(effect: effect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
         blurView.clipsToBounds = true
@@ -123,7 +115,7 @@ extension OSCoachmarkView {
     public func showLoader() {
         self.contentView.isHidden = true
         self.presenterDelegate?.showLoadingState()
-        if showBlur == false {
+        if self.blurView.isHidden == true {
             self.backgroundColor = UIColor.init(hex:0x3797F0)
         }
         self.loader.startAnimating()
@@ -136,9 +128,21 @@ extension OSCoachmarkView {
         self.backgroundColor = UIColor.clear
     }
     
+    public func enableBlurWithEffect(_ effect:UIBlurEffect = UIBlurEffect.init(style: .extraLight)) {
+        self.blurView.effect = effect
+        self.blurView.isHidden = false
+        self.backgroundColor = .clear
+    }
+    
+    public func disableBlur() {
+        self.blurView.isHidden = true
+    }
+    
+    
+    
     public override func layoutSubviews() {
         super.layoutSubviews()
-        blurView.layer.cornerRadius = ceil(self.frame.size.height/2)
+        blurView.layer.cornerRadius = self.layer.cornerRadius
     }
 }
 
