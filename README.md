@@ -6,7 +6,7 @@ TODO
 * [X] Abstract out presenter logic
 * [X] Add animation options to both top and bottom modes
 * [X] Add blur support
-* [ ] Create example coachmarks using the Factory Pattern
+* [X] Create example coachmarks using the Factory Pattern
 * [ ] Add logic for expanding coachmark THEN showcasing the content view
 * [ ] Add Cocoapod/Carthage support
 * [ ] Polish README
