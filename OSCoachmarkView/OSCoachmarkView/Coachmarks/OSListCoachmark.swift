@@ -50,7 +50,7 @@ public class OSListCoachmark:UIView {
         self.titleLabel.font = OSListCoachmark.getTitleFont()
         self.titleLabel.adjustsFontSizeToFitWidth = true
         self.titleLabel.minimumScaleFactor = 0.5
-        self.titleLabel.text = "See more coachmarks like this one"
+        self.titleLabel.text = "Tap to see more"
         self.titleLabel.textColor = UIColor.white
     }
     

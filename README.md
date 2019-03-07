@@ -12,4 +12,6 @@ TODO
 * [ ] Polish README
 * [ ] Generate documentation
 
-![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/demo.gif)
+![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/header.png)
+![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/appstore_coachmark.gif)
+![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/standard_coachmark.gif)

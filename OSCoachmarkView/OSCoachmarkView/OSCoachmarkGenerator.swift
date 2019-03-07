@@ -21,8 +21,8 @@ public class OSCoachmarkGenerator {
                 view = OSListCoachmark()
             case .appstore:
                 view = OSAppstoreCoachmark()
-            
         }
+        
         let coachmarkView = OSCoachmarkView()
         coachmarkView.attachedView = view
         return coachmarkView
