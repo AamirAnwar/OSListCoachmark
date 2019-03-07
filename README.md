@@ -13,5 +13,5 @@ TODO
 * [ ] Generate documentation
 
 ![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/header.png)
-![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/appstore_coachmark.gif)
+![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/appstore_coachmark.gif =127x270)
 ![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/standard_coachmark.gif)
