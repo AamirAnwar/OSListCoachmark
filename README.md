@@ -1,4 +1,4 @@
-![Alt Text](/docs/images/header.png)
+![Alt Text](/Docs/images/header.png)
 
 # OSCoachmarkView [Under Development]
   [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
@@ -6,7 +6,7 @@
 A lightweight framework for displaying coachmarks in iOS apps. 
 Built with zero non-native dependencies.
 
-![Alt Text](/docs/images/illustrations.png)
+![Alt Text](/Docs/images/illustrations.png)
 
 TODO
 * [X] Abstract out presenter logic
