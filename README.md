@@ -1,6 +1,12 @@
-# OSListCoachmark
+![Alt Text](./docs/images/header.png)
 
-A coachmark used in list views in iOS applications
+# OSCoachmarkView [Under Development]
+  [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
+
+A lightweight framework for displaying coachmarks in iOS apps. 
+Built with zero non-native dependencies.
+
+![Alt Text](./docs/images/illustrations.png)
 
 TODO
 * [X] Abstract out presenter logic
@@ -12,6 +18,25 @@ TODO
 * [ ] Polish README
 * [ ] Generate documentation
 
-![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/header.png)
-![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/appstore_coachmark.gif =127x270)
-![Alt Text](https://github.com/AamirAnwar/OSListCoachmark/blob/master/Docs/images/standard_coachmark.gif)
+
+
+## Showcase 
+
+### Standard list coachmark
+
+Example coachmark used in list views  
+![Alt Text](/Docs/images/standard_coachmark.gif)
+
+
+### Appstore coachmark
+
+A coachmark similar to the one used on the appstore product page  
+<pre> 
+
+
+</pre>
+![Alt Text](/Docs/images/appstore_coachmark.gif)  
+
+
+
+
