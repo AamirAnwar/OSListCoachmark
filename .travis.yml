@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode10.1
 xcode_project: OSCoachmarkView/OSCoachmarkView.xcodeproj
 xcode_scheme: OSCoachmarkView
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator10.1
 env:
   global:
   - FRAMEWORK_NAME=OSCoachmarkView
