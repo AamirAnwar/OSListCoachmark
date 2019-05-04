@@ -39,7 +39,7 @@ A coachmark similar to the one used on the appstore product page.
 
 ![Alt Text](/Docs/images/appstore_coachmark.gif)  
 
-### Usage
+## Usage
 
 You can use any of the preset coachmarks using OSListCoachmarkGenerator or create any custom view in the same fashion. Here is how you would embed your custom view inside the coachmark. 
 
