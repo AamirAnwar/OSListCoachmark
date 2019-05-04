@@ -2,6 +2,7 @@
 
 
 # OSCoachmarkView [Under Development]
+  [![Build Status](https://travis-ci.com/AamirAnwar/OSListCoachmark.svg?branch=master)](https://travis-ci.com/AamirAnwar/OSListCoachmark)
   [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
 
 A lightweight framework for displaying coachmarks in iOS apps. Built in pure Swift 👨‍💻
