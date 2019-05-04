@@ -4,8 +4,7 @@
 # OSCoachmarkView [Under Development]
   [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
 
-A lightweight framework for displaying coachmarks in iOS apps. 
-Built with zero non-native dependencies.
+A lightweight framework for displaying coachmarks in iOS apps. Built in pure Swift 👨‍💻
 
 ![Alt Text](/Docs/images/illustrations.png)
 
@@ -72,7 +71,7 @@ Feel free to reach out to me out twitter!
 
 OSListCoachmark is released under the MIT license. See [LICENSE](https://github.com/AamirAnwar/OSListCoachmark/blob/master/LICENSE) for more details.
 
-# TODO
+# Todo
 
 * [X] Abstract out presenter logic
 * [X] Add animation options to both top and bottom modes
