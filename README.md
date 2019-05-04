@@ -69,6 +69,8 @@ self.coachmarkPresenter.hide()
 </pre>
 
 
+Checkout the example Xcode Project in the Example folder which has a demo with all three classes in action.
+
 License
 ----
 
