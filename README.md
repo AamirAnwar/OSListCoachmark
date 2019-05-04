@@ -2,10 +2,10 @@
 
 
 # OSCoachmarkView [Under Development]
-  [![Build Status](https://travis-ci.com/AamirAnwar/OSListCoachmark.svg?branch=master)](https://travis-ci.com/AamirAnwar/OSListCoachmark)
-  [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
 [![Maintainability](https://api.codeclimate.com/v1/badges/d08c7dbce940087be5bd/maintainability)](https://codeclimate.com/github/AamirAnwar/OSListCoachmark/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d08c7dbce940087be5bd/test_coverage)](https://codeclimate.com/github/AamirAnwar/OSListCoachmark/test_coverage)
+  [![Build Status](https://travis-ci.com/AamirAnwar/OSListCoachmark.svg?branch=master)](https://travis-ci.com/AamirAnwar/OSListCoachmark)
+  [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)   
 
 A lightweight framework for displaying coachmarks in iOS apps. Built in pure Swift 👨‍💻
 
