@@ -63,8 +63,8 @@ Checkout the example Xcode Project in the Example folder which has a demo with a
 
 ### Additional Features 
 
-✔️ Added Blur support in OSListCoachmarkView
-✔️ Optional loader in OSListCoachmarkView
+- Added Blur support in OSListCoachmarkView ✔️
+- Optional loader in OSListCoachmarkView ✔️
 
 
 ## Requirements
