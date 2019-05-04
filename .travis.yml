@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode10.1
+xcode_project: OSCoachmarkView/OSCoachmarkView.xcodeproj
+xcode_scheme: OSCoachmarkView
+xcode_sdk: iphonesimulator9.3
+env:
+  global:
+  - FRAMEWORK_NAME=OSCoachmarkView
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_script: 
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: TAQlcIZCughCPhoVUhbPlwu4z0yKtvx/1+rVpjccKc8EoO5GfnqCXNLjptIkEKfXzIHODuqMNS6piphNj97rF+vAGK1wsN1D4DIRBc7BZfTZT19bqZWiB0ncxf2uCSDq1WluU5uZPy2VT2sUDgNnLceHsnxy8cRW+15idQ+utrwHo2CwYIF+8ItJ7PPZo8K/HBKJPwlNbPGQQqZIwAz8Z25eOI6oedYk1nuhooNHz9rvdpuS58q8wT+FUDe44alXok69nzS7b9PE5T0xfpaIUQ4pucyF6BRbdh16PJdCs6Q3NpG5VAWBEymNHKMKDzUrJb2euq7uDTIn1QMDuJf1om8jxPaylv12pL4KrgbuYUbbmD/TG7CFfrX7/inrPcinLUE9+cZFq0l7mPaQLSKyN4ZfVd8HbpG/JP1wRuCwHEfeKc2ADAiOwX7CiJISYZgvmUPNfwzWqCSJHqa97uQ83sK1JsJ7ChJfbR1qSLOxIFBxUHlHgpuytbv0t95IAcytp30PQp/6Kbg4qPWDbjWseNawC7rUylCKObPAn+A52iysHM1MN3MiNL2XKlaspsM6cdXy1sQMg1OHbi03T+h5v/HyrMQReQpWOeqj08dhirBkOVIFn3TJ3JSCekIRv0uOeEbkhbQ16V/h2/5wq+urnDFAAcczSOG6TBPqiIQVfE8=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: AamirAnwar/OSListCoachmark
+    tags: true
