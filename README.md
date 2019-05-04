@@ -44,28 +44,28 @@ A coachmark similar to the one used on the appstore product page.
 To can use any of the preset coachmarks using OSListCoachmarkGenerator or create any custom view in the same fashion. Here is how you would embed your custom view inside the coachmark. 
 
 <pre>
-		let view = CustomCoachmarkView()
-		let coachmarkView = OSCoachmarkView()
-        coachmarkView.attachedView = view
+let view = CustomCoachmarkView()
+let coachmarkView = OSCoachmarkView()
+coachmarkView.attachedView = view
 </pre>
 
 Sizing of the above custom coachmark will be based on autolayout subject to min/max constraints.
 To position the coachmark relative to the view, you can write your own logic to show/hide the coachmark or you can use OSCoachmarkPresenter to do this. Here's an example of what this might look like - 
 
 <pre>
-		let coachmarkPresenter = OSCoachmarkPresenter()
-		coachmarkPresenter.view = coachmarkView
-        coachmarkPresenter.attachToView(self.view, anchor: .bottom)
+let coachmarkPresenter = OSCoachmarkPresenter()
+coachmarkPresenter.view = coachmarkView
+coachmarkPresenter.attachToView(self.view, anchor: .bottom)
 </pre>
 
 OSCoachmarkPresenter objects can attach a coachmark to a given view with two modes - top and bottom. All animation and presentation logic is taken care of with you only having to call show() and hide() based on any logic you choose.
 
 <pre>
-		// Show
-		self.coachmarkPresenter.show()
+// Show
+self.coachmarkPresenter.show()
 
-		//Hide
-		self.coachmarkPresenter.hide()
+//Hide
+self.coachmarkPresenter.hide()
 </pre>
 
 
