@@ -41,7 +41,7 @@ A coachmark similar to the one used on the appstore product page.
 
 ### Usage
 
-To can use any of the preset coachmarks using OSListCoachmarkGenerator or create any custom view in the same fashion. Here is how you would embed your custom view inside the coachmark. 
+You can use any of the preset coachmarks using OSListCoachmarkGenerator or create any custom view in the same fashion. Here is how you would embed your custom view inside the coachmark. 
 
 <pre>
 let view = CustomCoachmarkView()
