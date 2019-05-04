@@ -61,6 +61,11 @@ self.coachmarkPresenter.hide()
 
 Checkout the example Xcode Project in the Example folder which has a demo with all three classes in action 🚀
 
+### Additional Features 
+
+✔️ Added Blur support in OSListCoachmarkView
+✔️ Optional loader in OSListCoachmarkView
+
 
 ## Requirements
 
