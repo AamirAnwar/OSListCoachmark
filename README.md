@@ -58,11 +58,17 @@ self.coachmarkPresenter.hide()
 Checkout the example Xcode Project in the Example folder which has a demo with all three classes in action 🚀
 
 
-# Contributing
+## Requirements
+
+- iOS 11.0+
+- Xcode 9
+- Swift 4
+
+## Contributing
 
 All help is welcome. Open an issue or even better submit a pull request 😀
 
-# Author
+## Author
 
 Aamir Anwar [@aamiranwarr](https://twitter.com/aamiranwarr)
 Feel free to reach out to me out twitter!
@@ -71,7 +77,7 @@ Feel free to reach out to me out twitter!
 
 OSListCoachmark is released under the MIT license. See [LICENSE](https://github.com/AamirAnwar/OSListCoachmark/blob/master/LICENSE) for more details.
 
-# Todo
+## Todo
 
 * [X] Abstract out presenter logic
 * [X] Add animation options to both top and bottom modes
