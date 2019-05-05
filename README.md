@@ -30,7 +30,21 @@ A coachmark similar to the one used on the appstore product page.
 
 ## Installation
 
-TODO add cocoapods and carthage here
+### Cocoapods
+
+For [CocoaPods](https://cocoapods.org), add this to your podfile
+
+```ruby
+  pod 'OSCoachmarkView', '~> 0.1'
+```
+
+### Carthage 
+For [Carthage](https://github.com/Carthage/Carthage), add the following to your Cartfile
+
+```ogdl
+github "AamirAnwar/OSListCoachmark" ~> 0.1
+```
+
 
 ## Usage
 
@@ -97,7 +111,7 @@ OSListCoachmark is released under the MIT license. See [LICENSE](https://github.
 * [X] Add animation options to both top and bottom modes
 * [X] Add blur support
 * [X] Create example coachmarks using the Factory Pattern
-* [ ] Add Cocoapod/Carthage support
+* [X] Add Cocoapod/Carthage support
 * [X] Polish README
 * [X] Add Travis Support
 * [X] Generate documentation
