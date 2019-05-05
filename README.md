@@ -69,6 +69,8 @@ Checkout the example Xcode Project in the Example folder which has a demo with a
 - Added Blur support in OSListCoachmarkView 
 - Optional loader in OSListCoachmarkView 
 
+## Documentation
+You can find the reference docs under `OSCoachmarkView/docs/index.html`
 
 ## Requirements
 
@@ -95,8 +97,7 @@ OSListCoachmark is released under the MIT license. See [LICENSE](https://github.
 * [X] Add animation options to both top and bottom modes
 * [X] Add blur support
 * [X] Create example coachmarks using the Factory Pattern
-* [ ] Add logic for expanding coachmark THEN showcasing the content view
 * [ ] Add Cocoapod/Carthage support
-* [ ] Polish README
-* [ ] Add Travis Support
-* [ ] Generate documentation
+* [X] Polish README
+* [X] Add Travis Support
+* [X] Generate documentation
