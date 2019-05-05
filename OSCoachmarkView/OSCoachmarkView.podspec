@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "OSCoachmarkView/**/*.{swift}"
-  # s.exclude_files = "OSCoachmarkView/OSCoachmarkViewTests/**"
+  s.exclude_files = "OSCoachmarkView/OSCoachmarkViewTests/**/*.{swift}"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -119,7 +119,7 @@ Pod::Spec.new do |s|
   #
 
   s.framework  = "OSCoachmarkView"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "XCTest"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
