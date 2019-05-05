@@ -85,7 +85,7 @@ All help is welcome. Open an issue or even better submit a pull request 😀
 ## Author
 
 Aamir Anwar [@aamiranwarr](https://twitter.com/aamiranwarr)
-Feel free to reach out to me out twitter!
+Feel free to reach out to me on twitter!
 
 ## License
 
