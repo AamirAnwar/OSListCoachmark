@@ -8,11 +8,16 @@
 
 import Foundation
 
+/// This anchor is used to specify whether the coachmark is placed on the bottom or top of it's associated superview
+///
+/// - top: Coachmark is aligned to the top
+/// - bottom: Coachmark is aligned to the bottom
 public enum OSCoachmarkAnchor {
     case top
     case bottom
 }
 
+/// A set of constants which are used to tweak the visual appearance and handling of the coachmarl
 enum OSCoachmarkViewConstants {
     static let coachmarkMinimumWidth:CGFloat = 50 + 2*horizontalPadding
     static let bottomPadding:CGFloat = 44
@@ -21,6 +26,7 @@ enum OSCoachmarkViewConstants {
     static let loaderSize:CGFloat = 46
 }
 
+/// A protocol for handling callbacks from the presenter. This allows different coachmarks to react in their own ways to lifecycle events
 public protocol OSCoachmarkPresenterDelegate:class {
     func didStartTouchInteraction()
     func didEndTouchInteraction()
@@ -28,6 +34,26 @@ public protocol OSCoachmarkPresenterDelegate:class {
     func resetLoadingState()
 }
 
+/**
+**OSCoachmarkPresenter** handles everything related to showing, hiding and managing the states of a coachmark.
+ 
+ The `view` property is of utmost importance. This class assumes you have supplied the necessary UIView subclass
+ which this presenter applies it's logic on.
+ 
+ 
+ - Remark:
+ This class is to be used to display any UIView subclass with behaviour of a coachmark
+ 
+ - Requires:
+ A UIView subclass
+ 
+ - Warning: A wonderful **crash** will be the result of a `nil` value for the public `view` property
+ 
+ - Version: 0.1.0
+ 
+ - Author: Aamir Anwar
+ 
+ */
 public class OSCoachmarkPresenter {
     public var view:UIView! {
         didSet {
@@ -55,7 +81,6 @@ public class OSCoachmarkPresenter {
     public var isLoading = false
     
     fileprivate var isTransitioning = false
-    
     fileprivate var topAdjust:CGFloat = 0
     fileprivate var bottomAdjust:CGFloat = 0
     fileprivate var anchor:OSCoachmarkAnchor = .bottom
@@ -71,7 +96,7 @@ public class OSCoachmarkPresenter {
     fileprivate var originalCornerRadius:CGFloat = 0.0
     
     // Helpers
-    var coachmarkHeight:CGFloat {
+    fileprivate var coachmarkHeight:CGFloat {
         get {
             return self.view.frame.size.height
         }
@@ -88,6 +113,12 @@ public class OSCoachmarkPresenter {
         self.heightConstraint?.isActive = true
     }
     
+    /// Setup constraints based on the anchor. This method attaches the coachmark to the supplied view and sets up the constraint references
+    ///
+    /// - Parameters:
+    ///   - view: The view on which the coachmark will act
+    ///   - anchor: Specify the position of the coachmark using any value from the OSCoachmarkAnchor enum
+    ///   - useSafeArea: An optional feature which aligns the coachmark to the safe area layout guide. False by default
     fileprivate func setupConstraintsWithSuperview(_ view:UIView,
                                                    anchor:OSCoachmarkAnchor,
                                                    shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
@@ -117,6 +148,7 @@ public class OSCoachmarkPresenter {
         self.view.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -OSCoachmarkViewConstants.horizontalPadding).isActive = true
     }
     
+    /// Show coachmark with animation
     public func show() {
         guard isShowing == false, isTransitioning == false else {return}
         isShowing = true
@@ -129,6 +161,7 @@ public class OSCoachmarkPresenter {
         }
     }
     
+    /// Hide coachmark with animation
     public func hide() {
         guard isShowing == true, isTransitioning == false else {return}
         
@@ -152,6 +185,12 @@ public class OSCoachmarkPresenter {
     }
     
     
+    /// Primary method to attach a coachmark to a given view.
+    /// - Parameters:
+    ///   - view: The superview to attach the coachmark to
+    ///   - anchor: The anchor to position the coachmark around
+    ///   - useSafeArea: Optional feature which attaches the coachmark to the safe area layout guides
+    /// - Note: This method works on auto-layout
     public func attachToView(_ view:UIView,
                              anchor:OSCoachmarkAnchor,
                              shouldUseSafeAreaLayoutGuide useSafeArea:Bool = false) {
@@ -163,11 +202,17 @@ public class OSCoachmarkPresenter {
         self.setupConstraintsWithSuperview(view, anchor: self.anchor, shouldUseSafeAreaLayoutGuide: useSafeArea)
     }
     
+    /// Tweak the top padding of the coachmark
+    ///
+    /// - Parameter top: Amount to add to the original value
     public func adjustTop(top:CGFloat) {
         self.topAdjust = top
         self.topConstraint?.constant += top;
     }
     
+    /// Tweak the bottom padding of the coachmark
+    ///
+    /// - Parameter bottom: This subtracts the given amount from the default bottom inset
     public func adjustBottom(bottom:CGFloat) {
         self.bottomAdjust = bottom
         self.bottomConstraint?.constant -= bottom;

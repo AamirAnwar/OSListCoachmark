@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// The appstore coachmark with an image, title and subtitle
 class OSAppstoreCoachmark:UIView {
     let containerView:UIView = UIView()
     

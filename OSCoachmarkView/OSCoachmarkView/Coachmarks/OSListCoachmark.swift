@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A basic list coachmark
 public class OSListCoachmark:UIView {
     fileprivate let coachmarkHeight:CGFloat = 46
     public let titleLabel:UILabel = UILabel()

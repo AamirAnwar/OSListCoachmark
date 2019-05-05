@@ -8,12 +8,21 @@
 
 import UIKit
 
+/// Protocol used for coachmark event callbacks
 public protocol OSCoachmarkViewDelegate:class {
     func didTapCoachmark(coachmark:OSCoachmarkView)
 }
-
+/**
+ This class encapsulates functionality expected of coachmarks such as a detail view, a loader and a blur view.
+ 
+ Use this class for any coachmarks to be used
+ 
+ - Note : Instances of this class can have an attached view and are expected to be used with a OSCoachmarkPresenter.
+ */
 public class OSCoachmarkView:UIView {
-    public let contentView = UIView()
+    /**
+     The attached view is used as the main content shown by the coachmark. Set this property to insert a custom view into the coachmark
+     */
     public var attachedView:UIView? {
         didSet {
             self.configureView(self.attachedView)
@@ -22,6 +31,7 @@ public class OSCoachmarkView:UIView {
     public weak var presenterDelegate:OSCoachmarkPresenterDelegate?
     public weak var delegate:OSCoachmarkViewDelegate?
     
+    fileprivate let contentView = UIView()
     fileprivate var blurView:UIVisualEffectView = {
         var effect = UIBlurEffect.init(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView.init(effect: effect)
@@ -31,7 +41,8 @@ public class OSCoachmarkView:UIView {
         return blurView
     }()
     
-    // Default Loader
+    
+    /// Loader for the coachmark
     public let loader:UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView.init(style: .white)
         loader.hidesWhenStopped = true
@@ -112,6 +123,7 @@ public class OSCoachmarkView:UIView {
 // Open API
 extension OSCoachmarkView {
     
+    /// Hide the attached the view and show the loader
     public func showLoader() {
         self.contentView.isHidden = true
         self.presenterDelegate?.showLoadingState()
@@ -121,6 +133,7 @@ extension OSCoachmarkView {
         self.loader.startAnimating()
     }
     
+    /// Hide the loader and resurface the attached view
     public func hideLoader() {
         self.loader.stopAnimating()
         self.contentView.isHidden = false
@@ -128,17 +141,19 @@ extension OSCoachmarkView {
         self.backgroundColor = UIColor.clear
     }
     
+    /// Add a blur to the background of this coachmark.
+    /// - Important : The background of the attached view must be transparent for the blur to work
+    /// - Parameter effect: The effect to use in the blur
     public func enableBlurWithEffect(_ effect:UIBlurEffect = UIBlurEffect.init(style: .extraLight)) {
         self.blurView.effect = effect
         self.blurView.isHidden = false
         self.backgroundColor = .clear
     }
     
+    /// Hide the blur
     public func disableBlur() {
         self.blurView.isHidden = true
     }
-    
-    
     
     public override func layoutSubviews() {
         super.layoutSubviews()
