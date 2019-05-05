@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OSCoachmarkView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/OSCoachmarkView" class="dashAnchor"></a>
+    <a title="OSCoachmarkView Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OSCoachmarkView Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OSCoachmarkGenerator.html">OSCoachmarkGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OSCoachmarkPresenter.html">OSCoachmarkPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OSCoachmarkView.html">OSCoachmarkView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OSListCoachmark.html">OSListCoachmark</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/OSCoachmarkAnchor.html">OSCoachmarkAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OSCoachmarkType.html">OSCoachmarkType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/OSCoachmarkPresenterDelegate.html">OSCoachmarkPresenterDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OSCoachmarkViewDelegate.html">OSCoachmarkViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OSCoachmarkView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">OSCoachmarkView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class encapsulates functionality expected of coachmarks such as a detail view, a loader and a blur view.</p>
+
+<p>Use this class for any coachmarks to be used</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note : Instances of this class can have an attached view and are expected to be used with a OSCoachmarkPresenter.
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC08attachedB0So6UIViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/attachedView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC08attachedB0So6UIViewCSgvp">attachedView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The attached view is used as the main content shown by the coachmark. Set this property to insert a custom view into the coachmark</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">attachedView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC17presenterDelegateAA0a9PresenterD0_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/presenterDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC17presenterDelegateAA0a9PresenterD0_pSgXwvp">presenterDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">presenterDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/OSCoachmarkPresenterDelegate.html">OSCoachmarkPresenterDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC8delegateAA0aB8Delegate_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC8delegateAA0aB8Delegate_pSgXwvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/OSCoachmarkViewDelegate.html">OSCoachmarkViewDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC6loaderSo019UIActivityIndicatorB0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/loader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC6loaderSo019UIActivityIndicatorB0Cvp">loader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loader for the coachmark</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">UIActivityIndicatorView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)initWithFrame:"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)initWithFrame:">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesBegan:withEvent:"></a>
+                    <a name="//apple_ref/swift/Method/touchesBegan(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesBegan:withEvent:">touchesBegan(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesCancelled:withEvent:"></a>
+                    <a name="//apple_ref/swift/Method/touchesCancelled(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesCancelled:withEvent:">touchesCancelled(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">touchesCancelled</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesEnded:withEvent:"></a>
+                    <a name="//apple_ref/swift/Method/touchesEnded(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@OSCoachmarkView@objc(cs)OSCoachmarkView(im)touchesEnded:withEvent:">touchesEnded(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">touchesEnded</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC10showLoaderyyF"></a>
+                    <a name="//apple_ref/swift/Method/showLoader()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC10showLoaderyyF">showLoader()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hide the attached the view and show the loader</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showLoader</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC10hideLoaderyyF"></a>
+                    <a name="//apple_ref/swift/Method/hideLoader()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC10hideLoaderyyF">hideLoader()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hide the loader and resurface the attached view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hideLoader</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC20enableBlurWithEffectyySo06UIBlurF0CF"></a>
+                    <a name="//apple_ref/swift/Method/enableBlurWithEffect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC20enableBlurWithEffectyySo06UIBlurF0CF">enableBlurWithEffect(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a blur to the background of this coachmark.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Important : The background of the attached view must be transparent for the blur to work
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableBlurWithEffect</span><span class="p">(</span><span class="n">_</span> <span class="nv">effect</span><span class="p">:</span><span class="kt">UIBlurEffect</span> <span class="o">=</span> <span class="kt">UIBlurEffect</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">extraLight</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>effect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The effect to use in the blur</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15OSCoachmarkViewAAC11disableBluryyF"></a>
+                    <a name="//apple_ref/swift/Method/disableBlur()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15OSCoachmarkViewAAC11disableBluryyF">disableBlur()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hide the blur</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disableBlur</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@OSCoachmarkView@objc(cs)OSCoachmarkView(im)layoutSubviews"></a>
+                    <a name="//apple_ref/swift/Method/layoutSubviews()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@OSCoachmarkView@objc(cs)OSCoachmarkView(im)layoutSubviews">layoutSubviews()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-05-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

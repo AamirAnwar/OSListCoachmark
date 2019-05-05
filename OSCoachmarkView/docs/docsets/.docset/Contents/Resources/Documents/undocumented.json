@@ -1,0 +1,509 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 13,
+      "symbol": "OSAppstoreCoachmark.containerView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 15,
+      "symbol": "OSAppstoreCoachmark.leftImageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 33,
+      "symbol": "OSAppstoreCoachmark.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 44,
+      "symbol": "OSAppstoreCoachmark.subtitleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 55,
+      "symbol": "OSAppstoreCoachmark.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 59,
+      "symbol": "OSAppstoreCoachmark.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSAppstoreCoachmark.swift",
+      "line": 64,
+      "symbol": "OSAppstoreCoachmark.setupViews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 13,
+      "symbol": "OSListCoachmark.coachmarkHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 14,
+      "symbol": "OSListCoachmark.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 16,
+      "symbol": "OSListCoachmark.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 21,
+      "symbol": "OSListCoachmark.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 25,
+      "symbol": "OSListCoachmark.setupViews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 39,
+      "symbol": "OSListCoachmark.setupTitleLabel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 58,
+      "symbol": "OSListCoachmark.getTitleFont()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 62,
+      "symbol": "OSListCoachmark.setText(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Coachmarks/OSListCoachmark.swift",
+      "line": 69,
+      "symbol": "OSListCoachmark.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkGenerator.swift",
+      "line": 16,
+      "symbol": "OSCoachmarkType.list",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkGenerator.swift",
+      "line": 17,
+      "symbol": "OSCoachmarkType.appstore",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 16,
+      "symbol": "OSCoachmarkAnchor.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 17,
+      "symbol": "OSCoachmarkAnchor.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 22,
+      "symbol": "OSCoachmarkViewConstants.coachmarkMinimumWidth",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 23,
+      "symbol": "OSCoachmarkViewConstants.bottomPadding",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 24,
+      "symbol": "OSCoachmarkViewConstants.horizontalPadding",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 25,
+      "symbol": "OSCoachmarkViewConstants.verticalPadding",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 26,
+      "symbol": "OSCoachmarkViewConstants.loaderSize",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 31,
+      "symbol": "OSCoachmarkPresenterDelegate.didStartTouchInteraction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 32,
+      "symbol": "OSCoachmarkPresenterDelegate.didEndTouchInteraction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 33,
+      "symbol": "OSCoachmarkPresenterDelegate.showLoadingState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 34,
+      "symbol": "OSCoachmarkPresenterDelegate.resetLoadingState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 58,
+      "symbol": "OSCoachmarkPresenter.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 65,
+      "symbol": "OSCoachmarkPresenter.width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 79,
+      "symbol": "OSCoachmarkPresenter.isShowing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 80,
+      "symbol": "OSCoachmarkPresenter.touchdownCompressionFactor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 81,
+      "symbol": "OSCoachmarkPresenter.isLoading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 83,
+      "symbol": "OSCoachmarkPresenter.isTransitioning",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 84,
+      "symbol": "OSCoachmarkPresenter.topAdjust",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 85,
+      "symbol": "OSCoachmarkPresenter.bottomAdjust",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 86,
+      "symbol": "OSCoachmarkPresenter.anchor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 87,
+      "symbol": "OSCoachmarkPresenter.bottomConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 88,
+      "symbol": "OSCoachmarkPresenter.topConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 89,
+      "symbol": "OSCoachmarkPresenter.heightConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 90,
+      "symbol": "OSCoachmarkPresenter.minWidthConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 91,
+      "symbol": "OSCoachmarkPresenter.widthConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 92,
+      "symbol": "OSCoachmarkPresenter.loaderWidthConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 93,
+      "symbol": "OSCoachmarkPresenter.loaderCenterXConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 94,
+      "symbol": "OSCoachmarkPresenter.loaderCenterYConstraint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 96,
+      "symbol": "OSCoachmarkPresenter.originalCornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 99,
+      "symbol": "OSCoachmarkPresenter.coachmarkHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 106,
+      "symbol": "OSCoachmarkPresenter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 108,
+      "symbol": "OSCoachmarkPresenter.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 224,
+      "symbol": "OSCoachmarkPresenter.didStartTouchInteraction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 234,
+      "symbol": "OSCoachmarkPresenter.didEndTouchInteraction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 245,
+      "symbol": "OSCoachmarkPresenter.showLoadingState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkPresenter.swift",
+      "line": 262,
+      "symbol": "OSCoachmarkPresenter.resetLoadingState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 13,
+      "symbol": "OSCoachmarkViewDelegate.didTapCoachmark(coachmark:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 31,
+      "symbol": "OSCoachmarkView.presenterDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 32,
+      "symbol": "OSCoachmarkView.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 34,
+      "symbol": "OSCoachmarkView.contentView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 35,
+      "symbol": "OSCoachmarkView.blurView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 52,
+      "symbol": "OSCoachmarkView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 56,
+      "symbol": "OSCoachmarkView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 63,
+      "symbol": "OSCoachmarkView.setupCoachmark()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 74,
+      "symbol": "OSCoachmarkView.setupLoader()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 81,
+      "symbol": "OSCoachmarkView.setupBlur()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 91,
+      "symbol": "OSCoachmarkView.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 96,
+      "symbol": "OSCoachmarkView.touchesCancelled(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 101,
+      "symbol": "OSCoachmarkView.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 107,
+      "symbol": "OSCoachmarkView.configureView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/OSCoachmarkView.swift",
+      "line": 158,
+      "symbol": "OSCoachmarkView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Utility.swift",
+      "line": 12,
+      "symbol": "UIColor.init(red:green:blue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Utility.swift",
+      "line": 23,
+      "symbol": "UIColor.init(hex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView/OSCoachmarkView/Utility.swift",
+      "line": 30,
+      "symbol": "UIImageView.setImageWithURL(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Hazmat/Documents/iOSProjects/OSListCoachmark/OSCoachmarkView"
+}
