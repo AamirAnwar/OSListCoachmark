@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "OSCoachmarkView"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "A coachmark to be used in list views"
 
   # This description is used to generate tags and improve search results.
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "../LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "OSCoachmarkView/**/*.{swift}"
-  # s.exclude_files = "Classes/Exclude"
+  # s.exclude_files = "OSCoachmarkView/OSCoachmarkViewTests/**"
 
   # s.public_header_files = "Classes/**/*.h"
 

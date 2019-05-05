@@ -7,8 +7,8 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
+            buildForTesting = "YES"
+            buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "43FFB4BC21D54BA300B04CC1"
                BuildableName = "OSCoachmarkView.framework"
                BlueprintName = "OSCoachmarkView"
+               ReferencedContainer = "container:OSCoachmarkView.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "43FFB4C521D54BA300B04CC1"
+               BuildableName = "OSCoachmarkViewTests.xctest"
+               BlueprintName = "OSCoachmarkViewTests"
                ReferencedContainer = "container:OSCoachmarkView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,6 +53,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "43FFB4BC21D54BA300B04CC1"
+            BuildableName = "OSCoachmarkView.framework"
+            BlueprintName = "OSCoachmarkView"
+            ReferencedContainer = "container:OSCoachmarkView.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -52,6 +75,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "43FFB4BC21D54BA300B04CC1"
+            BuildableName = "OSCoachmarkView.framework"
+            BlueprintName = "OSCoachmarkView"
+            ReferencedContainer = "container:OSCoachmarkView.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
