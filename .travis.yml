@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10.1
+osx_image: xcode10.2
 xcode_project: OSCoachmarkView/OSCoachmarkView.xcodeproj
 xcode_scheme: OSCoachmarkView
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
